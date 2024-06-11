@@ -1,0 +1,240 @@
+/* Start Global Rules */
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box; 
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0
+}
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #F2EDF3;
+    display: flex;
+    color: #fff;
+}
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background-color: #123;
+}
+::-webkit-scrollbar-thumb {
+    background-color: #6156A4;
+    border-radius: 5px;
+}
+/* End Global Rules */
+
+/* Start Variables */
+:root {
+    --mainColor: #123;
+    scroll-behavior: smooth;
+}
+/* End Variables */
+
+/* Start Components */
+a {
+    text-decoration: none;
+}
+/* End Components */
+
+
+/* Start Navbar */
+aside {
+    width: 88px;
+    height: 100vh;
+    min-height: 700px;
+    padding: 10px;
+    background-color: var(--mainColor);
+    color: var(--secondaryColor);
+    font-size: 1.2rem;
+    transition-duration: 0.5s;
+    overflow: hidden;
+    position: relative;
+}
+aside ul li:first-of-type {
+    display: flex;
+    gap: 18px;
+    align-items: center;
+    margin-bottom: 50px;
+}
+aside  ul li:first-of-type figure {
+    width: 40px;         
+    height: 40px;        
+    margin-right: 20px;
+    border-radius: 50%;
+    border: 3.5px solid #fff;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+aside ul li:first-of-type figure img {
+    width: 100%;
+    height: 100%;
+}
+aside ul li:first-of-type h2 {
+    font-size: 1.2rem;
+}
+aside ul {
+    list-style: none;
+    margin-top: 10px;
+    position: relative;
+    height: 97.5%;
+}
+aside ul li {
+    margin-top: 10px;
+}
+aside ul li a {
+    display: flex;
+    color: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    gap: 40px;
+    transition: 0.3s;
+    align-items: center;
+    overflow: hidden;
+}
+aside ul li a i {
+    font-size: 1rem;     
+}
+aside ul li a p {
+    font-size: 0.9rem;
+}
+aside ul li:last-of-type a {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: #E4517D;
+}
+aside ul li a:hover,
+aside ul li a.active {
+    background-color: #6156D3;
+}
+/* End Navbar */
+
+/* Start Content */
+content {
+    padding: 10px;
+    flex-grow: 1;
+    max-height: 100vh;
+    min-height: 700px;
+    overflow: auto;
+}
+content > div {
+    padding: 10px;
+    border-radius: 7px;
+    background-color: #6156A4;
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0
+}
+content main {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+}
+content main article {
+    /*background-color: var(--mainColor);*/
+    border-radius: 7px;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    transition: 0.3s;
+}
+.article1{
+    background: linear-gradient(to bottom, #FE9496, #FFFFFF); /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(top, #FE9496, #FFFFFF); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(top, #FE9496, #FFFFFF); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(top, #FE9496, #FFFFFF); /* For Firefox 3.6 to 15 */
+
+
+}
+.article2{
+    background: linear-gradient(to right, #3A9BE9, #FFFFFF); /* Adjust colors as per your preference*/ 
+}
+.article3{
+    background: linear-gradient(to right, #ff6e7f, #bfe9ff, #a7ff83); /* Adjust colors as per your preference */
+
+}
+.article4{
+    background: linear-gradient(to right, #3FD2BE, #FFFFFF); /* Adjust colors as per your preference */
+
+}
+
+/*this is the hover of the article*/
+content main article:hover {
+    background-color: #6156D3;
+}
+content main article i {
+    font-size: 2.2rem;
+}
+content main article div {
+    text-align: center;
+}
+content main article div p {
+    font-size: 0.9rem;
+}
+content main article div span {
+    font-size: 1.8rem;
+}
+/* Start Footer */
+footer {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    text-align: center;
+    color: black;
+}
+footer p {
+    margin-bottom: 10px;
+}
+footer a {
+    color:#6156D3;
+    font-weight: bold;
+    transition: 0.3s;
+}
+footer a[title="About Developer"]:hover {
+    color: gold
+}
+/* End Footer */
+/* End Content */
+
+
+
+@media (min-width: 576px){
+    /* Start Navbar */
+    aside {
+        padding: 15px;
+    }
+    aside  ul li:first-of-type figure {
+        width: 60px; 
+        height: 60px;
+        margin-right: 0;
+    }
+    aside ul li a i {
+        font-size: 1.5rem;    
+    }
+    /* End Navbar */
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px){
+    
+    aside:hover {
+        width: 270px;
+    }
+    /* Start Content */
+    content main {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    /* End Content */
+
+}
+
+/* Large devices (laptops, 992px and up) */
+@media(min-width:992px){
+
+    /* Start Content */
+    content main {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    /* End Content */
+}
